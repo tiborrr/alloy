@@ -16,8 +16,8 @@ set -euxo pipefail
 export TARGET_CONTAINER=${1:-}
 export DRONE_TAG=${DRONE_TAG:-}
 
-export RELEASE_ALLOY_IMAGE=grafana/alloy
-export DEVEL_ALLOY_IMAGE=grafana/alloy-dev
+export RELEASE_ALLOY_IMAGE=ptodev/alloy
+export DEVEL_ALLOY_IMAGE=ptodev/alloy-dev
 
 if [ -n "$DRONE_TAG" ]; then
   VERSION=$DRONE_TAG
