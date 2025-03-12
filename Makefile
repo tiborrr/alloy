@@ -133,7 +133,8 @@ endif
 
 .PHONY: lint
 lint: alloylint
-	find . -name go.mod -execdir golangci-lint run -v --timeout=10m \;
+	golangci-lint run -v --timeout=10m
+	(cd syntax && golangci-lint run -v --timeout=10m)
 	$(ALLOYLINT_BINARY) ./...
 
 .PHONY: test
